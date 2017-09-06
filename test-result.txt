@@ -1,0 +1,264 @@
+root@ubuntu1:/home/xxx/c-source-code/libpcap# uname -a
+Linux ubuntu1 4.4.0-93-generic #116~14.04.1-Ubuntu SMP Mon Aug 14 16:07:05 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
+
+
+
+root@ubuntu1:/home/xxx/c-source-code/libpcap# ifconfig
+br0       Link encap:Ethernet  HWaddr 00:00:00:00:00:00
+          inet addr:192.168.0.1  Bcast:192.168.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::74e5:ff:fe88:676f/64 Scope:Link
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:20 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:0 (0.0 B)  TX bytes:1214 (1.2 KB)
+
+em1       Link encap:Ethernet  HWaddr 74:9d:8f:88:6e:49
+          inet addr:10.221.118.127  Bcast:10.221.119.255  Mask:255.255.252.0
+          inet6 addr: 2003:1a09:9f:fffd:769d:8fff:fe88:6e49/64 Scope:Global
+          inet6 addr: fe80::769d:8fff:fe88:6e49/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:3829342 errors:0 dropped:3 overruns:0 frame:0
+          TX packets:116201 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:521081608 (521.0 MB)  TX bytes:32356686 (32.3 MB)
+          Interrupt:26
+
+...
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:1820 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1820 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1
+          RX bytes:118759 (118.7 KB)  TX bytes:118759 (118.7 KB)
+
+..
+
+
+root@ubuntu1:/home/xxx/c-source-code/libpcap# ./tst 20 em1 "dst host 10.221.118.127 and dst port 22"
+  Arg:0, value:./tst
+  Arg:1, value:20
+  Arg:2, value:em1
+  Arg:3, value:dst host 10.221.118.127 and dst port 22
+-------start tst_pcap_with_filter
+Dest device successfully found, name:em1: net:74dd0a, mask:fcffff
+Open device em1 successfully
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 150; total header length:150
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=136
+A TCP packet
+Packet captured length: 118; total header length:118
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=104
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+-------end tst_pcap_with_filter
+root@ubuntu1:/home/xxx/c-source-code/libpcap#
+
+
+
+
+root@ubuntu1:/home/xxx/c-source-code/libpcap# ./tst 10 em1 "dst host 10.221.118.127"
+  Arg:0, value:./tst
+  Arg:1, value:10
+  Arg:2, value:em1
+  Arg:3, value:dst host 10.221.118.127
+-------start tst_pcap_with_filter
+Dest device successfully found, name:em1: net:74dd0a, mask:fcffff
+Open device em1 successfully
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 74; total header length:74
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=1; ip_head_len=20, total_len=60
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 74; total header length:74
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=1; ip_head_len=20, total_len=60
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 74; total header length:74
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=1; ip_head_len=20, total_len=60
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 74; total header length:74
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=1; ip_head_len=20, total_len=60
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 74; total header length:74
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=1; ip_head_len=20, total_len=60
+-------end tst_pcap_with_filter
+root@ubuntu1:/home/xxx/c-source-code/libpcap#
+
+
+
+
+root@ubuntu1:/home/xxx/c-source-code/libpcap# ./tst 10 lo
+  Arg:0, value:./tst
+  Arg:1, value:10
+  Arg:2, value:lo
+-------start tst_pcap_fixed_port: count 10
+Packet captured length: 94; total header length:94
+ the upper layer protocol is 0x86dd; to be supported in future
+Packet captured length: 74; total header length:74
+ the upper layer protocol is 0x86dd; to be supported in future
+Packet captured length: 74; total header length:74
+src ip=127.0.0.1, dst ip =127.0.0.1, next_prot=6; ip_head_len=20, total_len=60
+A TCP packet
+Packet captured length: 54; total header length:54
+src ip=127.0.0.1, dst ip =127.0.0.1, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 94; total header length:94
+ the upper layer protocol is 0x86dd; to be supported in future
+Packet captured length: 74; total header length:74
+ the upper layer protocol is 0x86dd; to be supported in future
+Packet captured length: 74; total header length:74
+src ip=127.0.0.1, dst ip =127.0.0.1, next_prot=6; ip_head_len=20, total_len=60
+A TCP packet
+Packet captured length: 54; total header length:54
+src ip=127.0.0.1, dst ip =127.0.0.1, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 94; total header length:94
+ the upper layer protocol is 0x86dd; to be supported in future
+Packet captured length: 74; total header length:74
+ the upper layer protocol is 0x86dd; to be supported in future
+-------end tst_pcap_fixed_port
+root@ubuntu1:/home/xxx/c-source-code/libpcap#
+
+
+
+root@ubuntu1:/home/xxx/c-source-code/libpcap# ./tst 20 em1
+  Arg:0, value:./tst
+  Arg:1, value:20
+  Arg:2, value:em1
+-------start tst_pcap_fixed_port: count 20
+Packet captured length: 60; total header length:60
+ The packet is belong to ARP
+Packet captured length: 60; total header length:60
+ The packet is belong to ARP
+Packet captured length: 82; total header length:82
+src ip=10.221.118.154, dst ip =10.221.118.255, next_prot=17; ip_head_len=20, total_len=68
+A UDP packet
+Packet captured length: 92; total header length:92
+src ip=10.220.139.25, dst ip =10.220.139.255, next_prot=17; ip_head_len=20, total_len=78
+A UDP packet
+Packet captured length: 92; total header length:92
+src ip=10.221.118.41, dst ip =10.221.118.255, next_prot=17; ip_head_len=20, total_len=78
+A UDP packet
+Packet captured length: 92; total header length:92
+src ip=10.220.139.25, dst ip =10.220.139.255, next_prot=17; ip_head_len=20, total_len=78
+A UDP packet
+Packet captured length: 60; total header length:60
+ The packet is belong to ARP
+Packet captured length: 60; total header length:60
+ The packet is belong to ARP
+Packet captured length: 60; total header length:60
+ The packet is belong to ARP
+Packet captured length: 60; total header length:60
+ The packet is belong to ARP
+Packet captured length: 60; total header length:60
+ The packet is belong to ARP
+Packet captured length: 60; total header length:60
+ The packet is belong to ARP
+Packet captured length: 60; total header length:60
+ The packet is belong to ARP
+Packet captured length: 74; total header length:74
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=1; ip_head_len=20, total_len=60
+Packet captured length: 74; total header length:74
+src ip=10.221.118.127, dst ip =10.204.118.140, next_prot=1; ip_head_len=20, total_len=60
+Packet captured length: 278; total header length:278
+src ip=10.221.118.127, dst ip =10.204.118.140, next_prot=6; ip_head_len=20, total_len=264
+A TCP packet
+Packet captured length: 1028; total header length:1526
+src ip=10.221.118.127, dst ip =10.204.118.140, next_prot=6; ip_head_len=20, total_len=1512
+A TCP packet
+Packet captured length: 886; total header length:886
+src ip=10.221.118.127, dst ip =10.204.118.140, next_prot=6; ip_head_len=20, total_len=872
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+Packet captured length: 60; total header length:60
+src ip=10.204.62.140, dst ip =10.221.62.127, next_prot=6; ip_head_len=20, total_len=40
+A TCP packet
+-------end tst_pcap_fixed_port
+root@ubuntu1:/home/xxx/c-source-code/libpcap#
+
+
+root@ubuntu1:/home/xxx/c-source-code/libpcap# ./tst 20 eth0
+  Arg:0, value:./tst
+  Arg:1, value:20
+  Arg:2, value:eth0
+-------start tst_pcap_fixed_port: count 20
+Couldn't find the device: eth0: No such device exists (SIOCGIFHWADDR: No such device)
+
+
+
+root@ubuntu1:/home/xxx/c-source-code/libpcap# ./tst 10 em1 "dst host 10.221.118.127 and prot IP"
+  Arg:0, value:./tst
+  Arg:1, value:10
+  Arg:2, value:em1
+  Arg:3, value:dst host 10.221.118.127 and prot IP
+-------start tst_pcap_with_filter
+Dest device successfully found, name:em1: net:74dd0a, mask:fcffff
+Open device em1 successfully
+Parse filter fail: dst host 10.221.118.127 and prot IP: unknown host 'prot'
+
